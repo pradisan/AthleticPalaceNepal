@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-header" routerLinkActive="active">
+        <img class="logo" src="../assets/home/logo.png" routerLink="" alt="logo">
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" style="color: black; margin-right:30px"> Home
+                </a>
+            </li>
+            <li class="nav-item dropdown has-megamenu">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: black; margin-right:30px"> Men
+                </a>
+                <div class="dropdown-menu dropdown-large">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6 class="title">Clothings</h6>
+                            <ul class="list-unstyled">
+                                <li><a class="dropdown-item" routerLink="/clothings">All Clothing</a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/clothings', 'T-shirt']">T-shirt</a></li>
+                                <li><a class="dropdown-item" href=""
+                                        [routerLink]="['/clothings', 'Hoodies & Sweats']">Hoodies &
+                                        Sweats</a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/clothings', 'Running']">Polo</a>
+                                </li>
+                                <li><a class="dropdown-item" [routerLink]="['/clothings', 'Jacket']">Jackets</a>
+                                </li>
+                                <li><a class="dropdown-item" [routerLink]="['/clothings', 'Pant & Shorts']">Pants &
+                                        Shorts</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="title">Shoes</h6>
+                            <ul class="list-unstyled">
+                                <li><a class="dropdown-item" routerLink="/shoes">All Shoes</a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/shoes', 'Running']">Running</a>
+                                </li>
+                                <li><a class="dropdown-item" [routerLink]="['/shoes', 'Sneaker']">Sneakers</a>
+                                </li>
+                                <li><a class="dropdown-item" [routerLink]="['/shoes', 'Slide and Sandle']">Sandles &
+                                        Slides</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h6 class="title">Accessories</h6>
+                            <ul class="list-unstyled">
+                                <li><a class="dropdown-item">All Accessories</a></li>
+                                <li><a class="dropdown-item">Caps & Hats</a></li>
+                                <li><a class="dropdown-item">Underwears</a></li>
+                                <li><a class="dropdown-item">Socks</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: black; margin-right:30px">
+                    Women </a>
+                <div class="dropdown-menu dropdown-large">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6 class="title">Clothings</h6>
+                            <ul class="list-unstyled">
+                                <li><a class="dropdown-item">All Clothing</a></li>
+                                <li><a class="dropdown-item" href="#">T-shirt</a></li>
+                                <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                                <li><a class="dropdown-item" href="#">Jackets</a></li>
+                                <li><a class="dropdown-item" href="#">Shorts</a></li>
+                                <li><a class="dropdown-item" href="#">Tights</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="title">Shoes</h6>
+                            <ul class="list-unstyled">
+                                <li><a class="dropdown-item">All Shoes</a></li>
+                                <li><a class="dropdown-item" href="#">Running</a></li>
+                                <li><a class="dropdown-item" href="#">Sneakers</a></li>
+                                <li><a class="dropdown-item" href="#">Sandles & Slides</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="title">Accessories</h6>
+                            <ul class="list-unstyled">
+                                <li><a class="dropdown-item">All Accessories</a></li>
+                                <li><a class="dropdown-item" href="#">Caps & Hats</a></li>
+                                <li><a class="dropdown-item" href="#">Underwears</a></li>
+                                <li><a class="dropdown-item" href="#">Socks</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" style="color: black; margin-right:30px"> Sales
+                </a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>

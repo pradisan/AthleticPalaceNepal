@@ -1,0 +1,66 @@
+<!-- ##### Shop Grid Area Start ##### -->
+<section class="shop_grid_area section-padding-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="shop_sidebar_area">
+
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget catagory mb-50">
+                        <!-- Widget Title -->
+                        <h5 class="widget-title mb-30"><b>Catagory</b></h5>
+                        <ul class="sub-menu collapse show" id="clothing" style="list-style-type:none;">
+                            <li><a routerLink="/clothings">All</a></li>
+                            <li><a [routerLink]="['/clothings', 'T-shirt']">T-shirts</a></li>
+                            <li><a [routerLink]="['/clothings', 'Hoodies & Sweats']">Hoodies & Sweats</a></li>
+                            <li><a>Polo</a></li>
+                            <li><a [routerLink]="['/clothings', 'Jacket']">Jackets</a></li>
+                            <li><a>Pants</a></li>
+                            <li><a>Shorts</a></li>
+
+                        </ul>
+                    </div>
+
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget price mb-50">
+                        <!-- Widget Title -->
+                        <h5 class="widget-title mb-30"><b>Filter by</b></h5>
+                        <!-- Widget Title 2 -->
+                        <p class="widget-title2 mb-30"><b>Size</b></p>
+                        <div>
+                            <button class="button" *ngFor='let size of clothingSize'>{{size}}</button>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget brands mb-50">
+                        <!-- Widget Title 2 -->
+                        <p class="widget-title2 mb-30"><b>Brands</b></p>
+                        <div>
+                            <ul>
+                                <li><a>Nike</a></li>
+                                <li><a>Adidas</a></li>
+                                <li><a>Under Armaour</a></li>
+                                <li><a>Reebok</a></li>
+                                <li><a>Puma</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-9">
+                <div class="shop_grid_product_area">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-4" *ngFor="let clothingItem of clothingItems">
+                            <div class="container" [routerLink]="['/item','clothings', clothingItem.id]">
+                                <img class="image" src={{clothingItem.imageUrl[0]}} alt="First slide">
+                                <a style="color: black; font-size: large;">{{clothingItem.name}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

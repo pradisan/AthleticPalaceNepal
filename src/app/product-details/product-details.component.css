@@ -1,0 +1,21 @@
+#homePage {
+    margin: 30px;
+}
+
+.container {
+    position: relative;
+    font-family: Arial;
+  }
+
+
+.button {
+    margin-right: 10px;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.carousel-control-prev-icon {
+    color: black;
+}
