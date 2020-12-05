@@ -16,13 +16,13 @@ export class ProductDetailsComponent implements OnInit {
       this.id = +param['id']
       this.type = param['type']
       if (this.type == 'shoes') {
-        this.product = this.productService.getShoesItems().find(item => {
+        this.product = this.productService.getProduct().find(item => {
           return item.id == this.id
         })
       }
 
       if (this.type == 'clothings') {
-        this.product = this.productService.getClothingItems().find(item => {
+        this.product = this.productService.getProduct().find(item => {
           return item.id == this.id
         })
       }

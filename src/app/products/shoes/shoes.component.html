@@ -10,10 +10,10 @@
                         <!-- Widget Title -->
                         <h5 class="widget-title mb-30"><b>Catagory</b></h5>
                         <ul class="sub-menu collapse show" id="accessories" style="list-style-type:none;">
-                            <li><a routerLink="/shoes">All</a></li>
-                            <li><a [routerLink]="['/shoes', 'Running']">Running</a></li>
-                            <li><a [routerLink]="['/shoes', 'Sneaker']">Sneakers</a></li>
-                            <li><a [routerLink]="['/shoes', 'Slide and Sandle']">Sandles &amp; Slides</a></li>
+                            <li><a [routerLink]="['/shoes','Men']">All</a></li>
+                            <li><a [routerLink]="['/shoes', 'Men', 'Running']">Running</a></li>
+                            <li><a [routerLink]="['/shoes', 'Men', 'Sneaker']">Sneakers</a></li>
+                            <li><a [routerLink]="['/shoes', 'Men', 'Slide and Sandle']">Sandles &amp; Slides</a></li>
                         </ul>
                     </div>
 
@@ -24,8 +24,8 @@
                         <!-- Widget Title 2 -->
                         <p class="widget-title2 mb-30"><b>Size</b></p>
                         <div>
-                            <button class="button" *ngFor='let size of shoeSize'
-                                (click)="filterBySize(size)">{{size}}</button>
+                            <button class="button" *ngFor='let size of shoeSize' (click)="filterBySize(size)"
+                                [ngStyle]="{'background-color':shoesFilterList[0].shoeSize == size?filterBySize(size): 'white'}">{{size}}</button>
                         </div>
                     </div>
                     <br>
@@ -35,11 +35,10 @@
                         <p class="widget-title2 mb-30"><b>Brands</b></p>
                         <div class="widget-desc">
                             <ul style="list-style-type:none; color: black ;">
-                                <li><a>Nike</a></li>
-                                <li><a>Adidas</a></li>
-                                <li><a>Under Armaour</a></li>
-                                <li><a>Reebok</a></li>
-                                <li><a>Puma</a></li>
+                                <li *ngFor='let brand of brands' (click)="filterByBrand(brand)"
+                                    [ngStyle]="{'background-color':shoesFilterList[1].brand == brand?filterByBrand(brand): 'white'}">
+                                    {{brand}}</li>
+
                             </ul>
                         </div>
                     </div>

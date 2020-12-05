@@ -28,12 +28,13 @@
   position: relative;
   z-index: 1;
   background-color: #f5f7f9;
-  padding: 100px 5%; }
+  padding: 50px 5%;
+ }
   @media only screen and (max-width: 767px) {
     .brands-area {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      padding: 100px 5% 70px; } }
+      padding: 20px 5% 10px; } }
   @media only screen and (max-width: 767px) {
     .brands-area .single-brands-logo {
       -webkit-box-flex: 0;
@@ -42,7 +43,9 @@
       width: 33.33333%;
       max-width: 33.33333%; } }
   .brands-area .single-brands-logo img {
-    max-width: 120px; }
+    max-width: 120px; 
+    cursor: pointer;
+  }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .brands-area .single-brands-logo img {
         max-width: 90px; } }
@@ -79,20 +82,22 @@
     top: 0;
     left: 0;
     z-index: -10; }
-  .single_catagory_area .catagory-content a {
+  .single_catagory_area .catagory-content p {
     display: block;
     font-size: 30px;
     font-weight: 700;
     color: #000000;
     letter-spacing: 1px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer;
+   }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .single_catagory_area .catagory-content a {
+      .single_catagory_area .catagory-content p {
         font-size: 20px; } }
     @media only screen and (max-width: 767px) {
-      .single_catagory_area .catagory-content a {
+      .single_catagory_area .catagory-content p {
         font-size: 18px; } }
-  .single_catagory_area:hover .catagory-content a {
+  .single_catagory_area:hover .catagory-content p {
     color: #ff9203; }
 
 .cta-area {

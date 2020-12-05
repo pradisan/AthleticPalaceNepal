@@ -1,8 +1,8 @@
-<div class="carousel slide" data-ride="carousel" data-interval="2500">
+<div class="carousel slide" data-ride="carousel" data-interval="2000">
     <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-slide-to="0" class="active"></li>
+        <li data-slide-to="1"></li>
+        <li data-slide-to="2"></li>
     </ul>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -28,10 +28,10 @@
             </div>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <a class="carousel-control-prev" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
+    <a class="carousel-control-next" data-slide="next">
         <span class="carousel-control-next-icon"></span>
     </a>
 </div>
@@ -57,7 +57,7 @@
                 <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
                     style="background-image: url(../assets/home/shoes.jpeg);">
                     <div class="catagory-content">
-                        <a href="#" routerLink="/shoes">Shop Shoes</a>
+                        <p [routerLink]="['/shoes','Men']">Shop Shoes</p>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
                     style="background-image: url(../assets/home/tops.jpeg);">
                     <div class="catagory-content">
-                        <a href="#" routerLink="/clothings"> Shop Clothing</a>
+                        <p [routerLink]="['/clothing','Men']"> Shop Clothing</p>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                 <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
                     style="background-image: url(../assets/home/cap.jpg);">
                     <div class="catagory-content">
-                        <a href="#">Shop Accessories</a>
+                        <p routerLink="/assesories">Shop Accessories</p>
                     </div>
                 </div>
             </div>
@@ -103,28 +103,34 @@
 </div>
 
 <div class="brands-area d-flex align-items-center justify-content-between">
-    <!-- Brand Logo -->
+
     <div class="single-brands-logo">
         <img src="../assets/home/nike.png" alt="nike">
     </div>
-    <!-- Brand Logo -->
+
     <div class="single-brands-logo">
         <img src="../assets/home/adidas.png" alt="adidas">
     </div>
-    <!-- Brand Logo -->
+
     <div class="single-brands-logo">
         <img src="../assets/home/puma.jpg" alt="puma">
     </div>
-    <!-- Brand Logo -->
+
     <div class="single-brands-logo">
         <img src="../assets/home/underarmour.png" alt="UA">
     </div>
-    <!-- Brand Logo -->
+
     <div class="single-brands-logo">
         <img src="../assets/home/levis.png" alt="levis">
     </div>
-    <!-- Brand Logo -->
+
     <div class="single-brands-logo">
         <img src="../assets/home/rebook.png" alt="rebook">
     </div>
 </div>
+
+<!-- <div class="brands-area d-flex align-items-center justify-content-between">
+    <div class="single-brands-logo" *ngFor='let brandImage of brandsImageUrl'>
+        <img src="{{brandImage}}" alt="brandImage">
+    </div>
+</div> -->

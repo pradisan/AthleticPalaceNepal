@@ -10,13 +10,17 @@
                         <!-- Widget Title -->
                         <h5 class="widget-title mb-30"><b>Catagory</b></h5>
                         <ul class="sub-menu collapse show" id="clothing" style="list-style-type:none;">
-                            <li><a routerLink="/clothings">All</a></li>
-                            <li><a [routerLink]="['/clothings', 'T-shirt']">T-shirts</a></li>
-                            <li><a [routerLink]="['/clothings', 'Hoodies & Sweats']">Hoodies & Sweats</a></li>
-                            <li><a>Polo</a></li>
-                            <li><a [routerLink]="['/clothings', 'Jacket']">Jackets</a></li>
-                            <li><a>Pants</a></li>
-                            <li><a>Shorts</a></li>
+                            <li [routerLink]="['/clothing','Men']">All Clothing</li>
+                            <li [routerLink]="['/clothing', 'Men', 'T-shirt']">T-shirt</li>
+                            <li href="" [routerLink]="['/clothing', 'Men', 'Hoodies & Sweats']">Hoodies &
+                                Sweats</li>
+                            <li [routerLink]="['/clothing', 'Men', 'Polo']">Polo</li>
+                            <li [routerLink]="['/clothing', 'Men', 'Jacket']">Jackets
+                            </li>
+                            <li [routerLink]="['/clothing', 'Men', 'Pants']">Pants
+                            </li>
+                            <li [routerLink]="['/clothing', 'Men', 'Shorts']">Shorts
+                            </li>
 
                         </ul>
                     </div>
@@ -28,7 +32,8 @@
                         <!-- Widget Title 2 -->
                         <p class="widget-title2 mb-30"><b>Size</b></p>
                         <div>
-                            <button class="button" *ngFor='let size of clothingSize'>{{size}}</button>
+                            <button class="button" *ngFor='let size of clothingSize' (click)="filterBySize(size)"
+                                [ngStyle]="{'background-color':clothingFilterList[0].shoeSize == size?filterBySize(size): 'white'}">{{size}}</button>
                         </div>
                     </div>
                     <br>
@@ -38,11 +43,9 @@
                         <p class="widget-title2 mb-30"><b>Brands</b></p>
                         <div>
                             <ul>
-                                <li><a>Nike</a></li>
-                                <li><a>Adidas</a></li>
-                                <li><a>Under Armaour</a></li>
-                                <li><a>Reebok</a></li>
-                                <li><a>Puma</a></li>
+                                <li *ngFor='let brand of brands' (click)="filterByBrand(brand)"
+                                    [ngStyle]="{'background-color':clothingFilterList[1].brand == brand?filterByBrand(brand): 'white'}">
+                                    {{brand}}</li>
                             </ul>
                         </div>
                     </div>

@@ -8,9 +8,10 @@ import { FooterComponent } from './navbar/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { ClothingComponent } from './men-product/clothing/clothing.component';
-import { ShoesComponent } from './men-product/shoes/shoes.component';
+import { ClothingComponent } from './products/clothing/clothing.component';
+import { ShoesComponent } from './products/shoes/shoes.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AccessoriesComponent } from './products/accessories/accessories.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FooterComponent,
     ClothingComponent,
     ShoesComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AccessoriesComponent
   ],
   imports: [
     BrowserModule,
